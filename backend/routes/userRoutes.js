@@ -31,7 +31,7 @@ userRouter.post("/register", async (req, res) => {
 });
 //Login
 
-User.post("/login", async (req, res) => {
+userRouter.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
@@ -58,3 +58,4 @@ User.post("/login", async (req, res) => {
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 };
+module.exports = userRouter;
