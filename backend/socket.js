@@ -9,7 +9,7 @@ const socketIo = (io) => {
     //*Start  join room handler
     socket.on("join room", (groupId) => {
       //add socket to the specified romm
-      socket, join(groupId);
+      socket.join(groupId);
       //store user and romm info in connectedUsers map
       connectedUsers.set(socket.id, { user, room: groupId });
       //get list of all users currently in the room
@@ -77,7 +77,7 @@ const socketIo = (io) => {
     });
     socket.on("stop typing", ({ groupId }) => {
       //broadcast typing status to users in the room
-      socket.to(groupId).emit("userstop typing", { username: user?.username });
+      socket.to(groupId).emit("user stop typing", { username: user?.username });
     });
     //*End  Tying  indicator
   });

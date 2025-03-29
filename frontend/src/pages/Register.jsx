@@ -8,42 +8,43 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+import apiURL from "../../utils";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [loading, setLoading] = useState("");
+  const [loading, setLoading] = useState(false);
   const toast = useToast();
+  //Navigate
   const navigate = useNavigate();
-  //Handle sumbit login
+  //main logic for login
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/api/users/register",
-        {
-          email,
-          password,
-          username,
-        }
-      );
-      //save user in locaStorage
+      const { data } = await axios.post(`${apiURL}/api/users/register`, {
+        email,
+        password,
+        username,
+      });
+      console.log(data.user);
+
       navigate("/login");
     } catch (error) {
       toast({
         title: "Error",
-        description: error.response.data.message || " An error occured",
+        description: error.response.data.message || "An error occurred",
         status: "error",
         duration: 5000,
         isClosable: true,
       });
-      setLoading(false);
     }
+    setLoading(false);
   };
   return (
     <Box

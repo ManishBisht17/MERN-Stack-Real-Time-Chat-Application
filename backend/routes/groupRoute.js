@@ -49,6 +49,7 @@ groupRouter.post("/:groupId/join", protect, async (req, res) => {
 
     // Check if user is already a member
     if (group.members.includes(req.user._id)) {
+      console.log(req.user.username);
       return res
         .status(400)
         .json({ message: "Already a member of this group" });
