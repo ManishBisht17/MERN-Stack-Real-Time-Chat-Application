@@ -135,7 +135,7 @@ export default function LandingPage() {
                   zIndex: -1,
                 }}
               >
-                MasynTech
+                Manish ChatApp
               </Text>
               <br />
               <Text as="span" color="blue.400">
@@ -216,7 +216,7 @@ export default function LandingPage() {
                 <HStack justify="space-between">
                   <HStack>
                     <Icon as={FiUsers} />
-                    <Text fontWeight="bold">Team MasynTech</Text>
+                    <Text fontWeight="bold">Team Mern Devs</Text>
                   </HStack>
                   <HStack spacing={4}>
                     <Badge colorScheme="green" variant="solid">
@@ -236,13 +236,13 @@ export default function LandingPage() {
                 overflowY="auto"
               >
                 <ChatMessage
-                  sender="Sarah Chen"
+                  sender="Manish Bisht"
                   message="Hey team! Just pushed the new updates to staging."
                   time="10:30 AM"
                   isUser={false}
                 />
                 <ChatMessage
-                  sender="Alex Thompson"
+                  sender="Vikash Bisht"
                   message="Great work! The new features look amazing 🚀"
                   time="10:31 AM"
                   isUser={false}
@@ -255,7 +255,7 @@ export default function LandingPage() {
                 />
                 <Box w="100%" textAlign="center">
                   <Badge colorScheme="gray" fontSize="xs">
-                    Sarah is typing...
+                    Manish is typing...
                   </Badge>
                 </Box>
               </VStack>
