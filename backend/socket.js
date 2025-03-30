@@ -56,7 +56,6 @@ const socketIo = (io) => {
 
     //Triggered when user closes the connection
     socket.on("disconnect", () => {
-      console.log(`${user?.username} disconnected`);
       if (connectedUsers.has(socket.id)) {
         //Get user's room info before removing
         const userData = connectedUsers.get(socket.id);
