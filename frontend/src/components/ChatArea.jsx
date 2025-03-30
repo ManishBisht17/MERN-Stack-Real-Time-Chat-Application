@@ -239,30 +239,6 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
       </Box>
     ));
   };
-  // Sample data for demonstration
-  const sampleMessages = [
-    {
-      id: 1,
-      content: "Hey team! Just pushed the new updates to staging.",
-      sender: { username: "Sarah Chen" },
-      createdAt: "10:30 AM",
-      isCurrentUser: false,
-    },
-    {
-      id: 2,
-      content: "Great work! The new features look amazing 🚀",
-      sender: { username: "Alex Thompson" },
-      createdAt: "10:31 AM",
-      isCurrentUser: false,
-    },
-    {
-      id: 3,
-      content: "Thanks! Let's review it in our next standup.",
-      sender: { username: "You" },
-      createdAt: "10:32 AM",
-      isCurrentUser: true,
-    },
-  ];
 
   return (
     <Flex
