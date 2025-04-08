@@ -1,2 +1,3 @@
-const apiURL = "http://localhost:5000";
+const apiURL =
+  "https://mern-stack-real-time-chat-application-xbh7.onrender.com";
 export default apiURL;
