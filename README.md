@@ -13,7 +13,7 @@ A real-time group chat application built using the **MERN stack** (MongoDB, Expr
 - **Authentication**: JWT, bcrypt
 - **Deployment**: Vercel (frontend), Render/Heroku (backend), MongoDB Atlas (database)
 
----
+--
 
 ## ✨ Features
 
